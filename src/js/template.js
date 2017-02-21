@@ -1,27 +1,36 @@
 import $ from "jquery";
+//import { infoObject } from "./github";
 
-function writeCard(infoObject){
+function writeCard(infoObject2){
 /*
   infoObject.name
   infoObject.gitUrl
   infoObject.email
   infoObject.company
   infoObject.website
+  ${infoObject.name}
 */
+console.log(infoObject2.name);
+
 $(".container").append(`
   <div class="box">
     <div class="top-section">
-    Your name
+    ${infoObject2.name}
     </div>
 
     <article class="media">
 
       <div class="media-content">
-        <div class="content">
+        <div class="content" id="box1">
           <p>
             <strong>The Basics</strong>
             <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            <div><span>Name:</span> ${infoObject2.name}</div>
+            <div><span>Github URL:</span><a href="${infoObject2.hurl}"> ${infoObject2.login}</a></div>
+            <div><span>Email:</span>  ${infoObject2.email}</div>
+            <div><span>Company:</span>  ${infoObject2.company}</div>
+            <div><span>website:</span><a href="${infoObject2.blog}"> My Blog</a></div>
+
           </p>
         </div>
       </div>
@@ -30,15 +39,15 @@ $(".container").append(`
         <div class="content">
           <p>
             <strong>The Story</strong>
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            <br><br>
+            ${infoObject2.bio}
           </p>
         </div>
       </div>
 
       <div class="media-right">
-        <figure class="image is-64x64">
-          <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
+        <figure class="image is-150x150">
+          <img src="${infoObject2.pic}" alt="Image">
         </figure>
       </div>
 

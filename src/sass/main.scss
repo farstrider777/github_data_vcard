@@ -1,11 +1,73 @@
  @import "bulma";
 
  .top-section {
-   background-color: darkgray;
+   background-color: black;
    height: 65px;
    border-top-left-radius: 4px;
    border-top-right-radius: 4px;
- }
+   color: white;
+   text-align: center;
+   font-size: 36px;
+}
+
+.container1 {
+  width: 100%;
+  height: 200px;
+  background: #222;
+}
+.zigzag {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.zigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 10px;
+}
+.container2 {
+  background: #E2E2E2;
+}
+.container2:before {
+  background:
+    linear-gradient(
+      45deg, transparent 33.333%,
+      #E2E2E2 33.333%, #E2E2E2 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #E2E2E2 33.333%, #E2E2E2 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 40px;
+}
+/*
+   .top-section:after {
+   content: " ";
+       display:block;
+       position: relative;
+   top:0px;left:0px;
+       width:100%;
+       height:36px;
+       background: linear-gradient(#2B3A48 0%, transparent 0%), linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 linear-gradient(45deg, #272220 33.33%, #2B3A48 33.33%) 0 0%;
+       background: -webkit-linear-gradient(#2B3A48 0%, transparent 0%), -webkit-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -webkit-linear-gradient(45deg, #272220 33.33%, #2B3A48 33.33%) 0 0%;
+       background: -o-linear-gradient(#2B3A48 0%, transparent 0%), -o-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -o-linear-gradient(45deg, #272220 33.33%, #2B3A48 33.33%) 0 0%;
+       background: -moz-linear-gradient(#2B3A48 0%, transparent 0%), -moz-linear-gradient(135deg, #272220 33.33%, transparent 33.33%) 0 0%, #272220 -moz-linear-gradient(45deg, #272220 33.33%, #2B3A48 33.33%) 0 0%;
+       background-repeat: repeat-x;
+       background-size: 0px 100%, 9px 27px, 9px 27px;
+       }
+
+*/
+
+img {
+  border-radius: 50%;
+  padding: 10px;
+  width: 150px;
+}
 
 .box {
   margin-top: 50px;
@@ -15,7 +77,6 @@
   padding-left: 0px;
   padding-right: 0px;
 }
-
 
 .media {
   display: block;
@@ -27,4 +88,42 @@
 
 .media-right {
   display: block;
+}
+
+span {
+  color: #8BB7B7;
+}
+@media screen and (min-width: 650px) {
+  .media {
+    display: flex;
+  }
+
+  #box1 {
+    width: 200px;
+  }
+
+  .media-content {
+    //display: inline-block;
+  }
+
+  .media-right {
+    //display: inline-block;
+  }
+
+}
+
+
+@media screen and (min-width: 750px) {
+  .media {
+    //display: flex;
+  }
+
+  .media-content {
+    //display: flex;
+  }
+
+  .media-right {
+    //display: flex;
+  }
+
 }

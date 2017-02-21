@@ -1,5 +1,6 @@
 
 import $ from "jquery";
+import {writeCard} from "./template"
 //var BASE_URL = "https://api.github.com";
 
 function getUser () {
@@ -12,7 +13,8 @@ function getUser () {
   });
 }
 
-
+var infoObject = {name: 0, login: 0, email: 0,
+  company: 0, blog: 0, bio: 0, pic: 0, hurl: 0};
 
 function info(data, success, xmlobject){
   console.log(data);
@@ -23,7 +25,16 @@ function info(data, success, xmlobject){
   console.log(data.email);
   console.log(data.company);
   console.log(data.blog);
+  infoObject.name = data.name;
+  infoObject.login = data.login;
+  infoObject.email = data.email;
+  infoObject.company = data.company;
+  infoObject.blog = data.blog;
+  infoObject.bio = data.bio;
+  infoObject.pic = data.avatar_url;
+  infoObject.hurl = data.html_url;
 
+  writeCard(infoObject);
 }
 
 export { info, getUser }
