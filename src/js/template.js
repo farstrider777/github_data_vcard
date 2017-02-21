@@ -46,9 +46,9 @@ $(".container").append(`
       </div>
 
       <div class="media-right">
-        <figure class="image is-150x150">
+
           <img src="${infoObject2.pic}" alt="Image">
-        </figure>
+
       </div>
 
     </article>
