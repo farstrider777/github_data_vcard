@@ -1,25 +1,12 @@
 import $ from "jquery";
-//import { infoObject } from "./github";
 
 function writeCard(infoObject2){
-/*
-  infoObject.name
-  infoObject.gitUrl
-  infoObject.email
-  infoObject.company
-  infoObject.website
-  ${infoObject.name}
-*/
-console.log(infoObject2.name);
-
 $(".container").append(`
   <div class="box">
     <div class="top-section zigzag container1">
     ${infoObject2.name}
     </div>
-
     <article class="media zigzag container2">
-
       <div class="media-content">
         <div class="content" id="box1">
           <p>
@@ -30,11 +17,9 @@ $(".container").append(`
             <div><span>Email:</span>  ${infoObject2.email}</div>
             <div><span>Company:</span>  ${infoObject2.company}</div>
             <div><span>website:</span><a href="${infoObject2.blog}"> My Blog</a></div>
-
           </p>
         </div>
       </div>
-
       <div class="media-content">
         <div class="content">
           <p>
@@ -44,21 +29,12 @@ $(".container").append(`
           </p>
         </div>
       </div>
-
       <div class="media-right">
-
-          <img src="${infoObject2.pic}" alt="Image">
-
+        <img src="${infoObject2.pic}" alt="Image">
       </div>
-
     </article>
   </div>
-
-
-
-
   `);
-
 }
 
 export { writeCard }

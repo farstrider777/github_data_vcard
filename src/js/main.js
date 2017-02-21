@@ -1,5 +1,4 @@
 import $ from "jquery";
 import {info, getUser} from "./github";
 
-
-getUser().then(info)
+getUser().then(info);
