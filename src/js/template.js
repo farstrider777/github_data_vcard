@@ -14,11 +14,11 @@ console.log(infoObject2.name);
 
 $(".container").append(`
   <div class="box">
-    <div class="top-section">
+    <div class="top-section zigzag container1">
     ${infoObject2.name}
     </div>
 
-    <article class="media">
+    <article class="media zigzag container2">
 
       <div class="media-content">
         <div class="content" id="box1">
