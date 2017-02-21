@@ -83,6 +83,7 @@ img {
 
 .media-content {
   display: block;
+  padding-left: 10px;
 }
 
 .media-right {
@@ -103,5 +104,6 @@ span {
 
   #box1 {
     width: 200px;
+    border-right: 2px solid darkgray;
   }
 }
